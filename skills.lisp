@@ -12,6 +12,6 @@
 
 (defvar *skills* (make-hash-table))
 (add-instance-maker *skills* :spotting
-                    'skill
+                    skill
                     :name :spotting
                     :synergies '(:psyche :sight))
