@@ -1,13 +1,16 @@
-(load "aspects.lsp")
-(load "rules.lsp")
+(load "aspects.lisp")
+(load "rules.lisp")
 
 (defclass entity ()
   ((location :accessor location
              :initarg :location
              :initform '(0 0))
-   (weight :accessor weight
-           :initarg :weight
-           :initform 0)))
+   (volume :accessor volume
+           :initarg :volume
+           :initform 0)
+   (density :accessor density
+            :initarg :density
+            :initform 0))
 
 (defgeneric tick (entity world)
   (:documentation "Go through a `tick` for a certain entity instance"))
