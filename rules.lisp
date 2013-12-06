@@ -1,3 +1,6 @@
+
+(in-package :clags)
+
 (load "utils.lisp")
 
 (defclass effect () ())
@@ -6,6 +9,7 @@
   ()
   (:documentation
    "Buffs are positive effects."))
+
 (defclass debuff (effect)
   ()
   (:documentation
@@ -18,7 +22,7 @@ such as e.g. poison and illnesses"))
          :initarg :name)))
 
 (defvar *organs* (make-hash-table))
-(add-instance-maker *organs* :heart 'organ :name :heart)
+(add-instance-maker *organs* :heart organ :name :heart)
 
 (defclass ligament () ())
 (defclass tendon () ())
@@ -57,6 +61,6 @@ such as e.g. poison and illnesses"))
      ))
 
 (defclass damage ()
-  (type :accessor type
-        :initarg :type))
+  ((kind :accessor kind
+        :initarg :kind)))
 

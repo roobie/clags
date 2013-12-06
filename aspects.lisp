@@ -1,4 +1,7 @@
-(load "rules.lsp")
+
+(in-package :clags)
+
+(load "rules.lisp")
 
 (defclass mobile () ())
 

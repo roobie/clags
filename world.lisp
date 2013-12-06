@@ -1,4 +1,7 @@
-(load "entitites.lisp")
+
+(in-package :clags)
+
+(load "entities.lisp")
 (load "utils.lisp")
 
 (defclass tile ()
@@ -16,7 +19,7 @@
 (add-instance-maker *tiles* :bound tile :kind :bound :glyph "X" :colour :white)
 
 (defclass zone ()
-  ((tiles :initform (make-array '(10 10) :element-type 'tile))))
+  ((tiles :initform (make-array '(10 10) :element-type 'tile :initial-element (gethash :floor *tiles*)))))
 
 (defclass world ()
   ((entities :accessor entities

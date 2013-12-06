@@ -1,3 +1,6 @@
+
+(in-package :clags)
+
 (load "utils.lisp")
 
 (defclass skill ()
@@ -12,6 +15,5 @@
 
 (defvar *skills* (make-hash-table))
 (add-instance-maker *skills* :spotting
-                    skill
-                    :name :spotting
-                    :synergies '(:psyche :sight))
+                    skill :name :spotting :synergies '(:psyche :sight))
+
