@@ -49,7 +49,15 @@
 (defclass mammal () ())
 
 (defclass humanoid (creature)
-  ())
+  ((status :accessor status
+           :initarg :status
+           :initform (make-instance 'status
+                                    :anatomy (make-instance 'anatomy
+                                                            :body-parts (list (make-instance 'body-part
+                                                                                             :muscles (list (make-instance 'muscle)))))))))
 
 (defclass human (humanoid mammal melee-attacker)
+  ())
+
+(defclass goblin (humanoid mammal melee-attacker)
   ())

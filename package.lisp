@@ -4,6 +4,6 @@
   (:export entity
            damage
            ;...
-           ))
+           test))
 
 (load "core.lisp")
