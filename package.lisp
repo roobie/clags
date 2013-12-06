@@ -4,6 +4,7 @@
   (:export entity
            damage
            ;...
+           uuid
            test))
 
-(load "core.lisp")
+(load "core/core.lisp")
